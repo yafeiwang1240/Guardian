@@ -1,9 +1,9 @@
-package com.githup.yafeiwang1240.guardian.buffer;
+package com.githup.yafeiwang1240.guardian.factory;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class BufferThreadPool {
+public class ThreadPoolFactory {
 
     public static ThreadPoolExecutor newThreadPoolExecutor() {
         return newThreadPoolExecutor(2, 5, 60000, TimeUnit.MILLISECONDS,  20);
