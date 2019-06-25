@@ -49,9 +49,9 @@ public class DistributeServerImpl implements IDistributeServer {
                     dtos.add(deque.poll());
                 }
                 lock.unlock();
+                dtos.forEach(DistributeServerImpl::execute);
+                dtos.clear();
             }
-            dtos.forEach(DistributeServerImpl::execute);
-            dtos.clear();
         }
 
         protected void stop() {

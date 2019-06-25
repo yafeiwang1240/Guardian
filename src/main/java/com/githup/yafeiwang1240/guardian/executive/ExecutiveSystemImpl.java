@@ -87,8 +87,9 @@ public class ExecutiveSystemImpl implements IExecutiveSystem {
                     } else if(val[0] instanceof List){
                         List<String> command = ((List<String>) val[0]);
                         process = new ProcessBuilder(command).redirectErrorStream(false).start();
+                    }else {
+                        return;
                     }
-                    return;
                 } else if(val.length == 2) {
                     if(!(val[1] instanceof String[])) {
                         return;
@@ -100,8 +101,9 @@ public class ExecutiveSystemImpl implements IExecutiveSystem {
                     } else if(val[0] instanceof String) {
                         String command = (String) val[0];
                         process = Runtime.getRuntime().exec(command, env);
+                    }else {
+                        return;
                     }
-                    return;
                 } else if(val.length == 3) {
                     if(!(val[1] instanceof String[] || !(val[2] instanceof String))) {
                         return;
@@ -115,10 +117,12 @@ public class ExecutiveSystemImpl implements IExecutiveSystem {
                     } else if(val[0] instanceof String) {
                         String command = (String) val[0];
                         process = Runtime.getRuntime().exec(command, env, file);
+                    } else {
+                        return;
                     }
+                } else {
                     return;
                 }
-                return;
             } catch (Exception e) {
                 // ignore
             }

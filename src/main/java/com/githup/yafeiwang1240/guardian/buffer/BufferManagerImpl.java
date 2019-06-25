@@ -42,6 +42,7 @@ public class BufferManagerImpl implements IBufferManager {
 
     @Override
     public void read(ProcessDto dto) {
+        processDtoMap.put(dto.getCommandDto().getId(), dto);
         container.take(dto);
         // 第一条日志
         ConsoleDto consoleDto = ConsoleDtoFactory.newConsoleDto("开始监控控制台", RecordEnum.NEW, ResultEnum.NONE);

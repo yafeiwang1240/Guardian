@@ -43,12 +43,12 @@ public class BufferThread implements Runnable{
         try {
             inputStreamReader = new InputStreamReader(in);
             bufferedReader = new BufferedReader(inputStreamReader);
-            String chars = null;
+            String chars;
             while (StringUtils.isNotEmpty((chars = bufferedReader.readLine()))) {
-
+                handler.invoke(id, recordEnum, chars);
             }
         } catch (Exception e) {
-
+            // ignore
         }  finally {
             if(inputStreamReader != null) {
                 IOUtils.closeQuietly(inputStreamReader);
@@ -59,6 +59,7 @@ public class BufferThread implements Runnable{
             if(bufferedReader != null) {
                 IOUtils.closeQuietly(bufferedReader);
             }
+            handler.invoke(id, RecordEnum.END, recordEnum == RecordEnum.ERROR ? "结束异常流缓冲" : "结束普通输出流缓冲");
         }
     }
 

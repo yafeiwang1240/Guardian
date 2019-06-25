@@ -1,5 +1,10 @@
 package com.githup.yafeiwang1240;
 
+import com.githup.yafeiwang1240.guardian.annotation.Command;
+import com.githup.yafeiwang1240.guardian.annotation.ProcessElement;
+import com.githup.yafeiwang1240.guardian.client.GuardainClient;
+import com.githup.yafeiwang1240.guardian.dto.ConsoleDto;
+import com.githup.yafeiwang1240.guardian.handler.CallBack;
 import com.githup.yafeiwang1240.obrien.uitls.IOUtils;
 
 import java.io.BufferedReader;
@@ -16,8 +21,42 @@ public class App {
     static Process process;
 
     static ReentrantLock lock = new ReentrantLock();
+
+    @ProcessElement
+    public static class Command {
+
+        @com.githup.yafeiwang1240.guardian.annotation.Command
+        String command = "java -jar D:/test.jar";
+    }
+
+    public static class Call implements CallBack<ConsoleDto> {
+
+        private String id;
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        @Override
+        public void invoke(ConsoleDto data) {
+            System.out.println(data.getPrint());
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Call callBack = new Call();
+        Command command = new Command();
+        String id = GuardainClient.execute(command, callBack);
+        callBack.setId(id);
+
+    }
+
+    public static void test() {
+
         try {
 //            Ping("ping", "-t", "14.215.177.39");
 //            Ping("java -jar D:/test.jar");
