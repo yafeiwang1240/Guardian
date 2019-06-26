@@ -1,16 +1,13 @@
 package com.githup.yafeiwang1240;
 
-import com.githup.yafeiwang1240.guardian.annotation.Command;
 import com.githup.yafeiwang1240.guardian.annotation.ProcessElement;
 import com.githup.yafeiwang1240.guardian.client.GuardainClient;
 import com.githup.yafeiwang1240.guardian.dto.ConsoleDto;
 import com.githup.yafeiwang1240.guardian.handler.CallBack;
+import com.githup.yafeiwang1240.guardian.system.SystemEnvironment;
 import com.githup.yafeiwang1240.obrien.uitls.IOUtils;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -48,18 +45,12 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Call callBack = new Call();
-        Command command = new Command();
-        String id = GuardainClient.execute(command, callBack);
-        callBack.setId(id);
-
+//        test();
+        System.out.println(SystemEnvironment.os().toString());
     }
 
-    public static void test() {
-
+    public static void test3() {
         try {
-//            Ping("ping", "-t", "14.215.177.39");
-//            Ping("java -jar D:/test.jar");
             WaitThread thread = new WaitThread();
             new Thread(thread).start();
             Thread.sleep(1000);
@@ -72,6 +63,22 @@ public class App {
                 System.out.println("我想获得锁");
                 lock.notify();
             }
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }
+    public static void test2() {
+        Call callBack = new Call();
+        Command command = new Command();
+        String id = GuardainClient.execute(command, callBack);
+        callBack.setId(id);
+    }
+    public static void test() {
+
+        try {
+            Ping("java", "-jar", "D:/test.jar");
+//            Ping("java -jar D:/test.jar");
+
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -104,9 +111,10 @@ public class App {
         }
     }
 
-    public static void Ping(String command) throws IOException, InterruptedException {
-        process = Runtime.getRuntime().exec(command);
-//        Process process = new ProcessBuilder(command).redirectErrorStream(true).start();
+    public static void Ping(String... command) throws IOException, InterruptedException {
+//        process = Runtime.getRuntime().exec(command);
+        process = new ProcessBuilder(command).redirectOutput(new File("D:/err.txt")).redirectErrorStream(true).start();
+
         new Thread(new Reader(process.getErrorStream(), "error")).start();
         new Thread(new Reader(process.getInputStream(), "info")).start();
 

@@ -6,7 +6,7 @@
 
     <groupId>com.githup.yafeiwang1240</groupId>
     <artifactId>Guardian</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>Guardian</name>
     <description>进程管理框架</description>
