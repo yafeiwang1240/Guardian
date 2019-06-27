@@ -23,7 +23,7 @@ public class App {
     public static class Command {
 
         @com.githup.yafeiwang1240.guardian.annotation.Command
-        String command = "java -jar D:/test.jar";
+        String command = "java - D:/test.jar";
     }
 
     public static class Call implements CallBack<ConsoleDto> {
@@ -45,8 +45,8 @@ public class App {
     }
 
     public static void main(String[] args) {
-//        test();
-        System.out.println(SystemEnvironment.os().toString());
+        test();
+//        System.out.println(SystemEnvironment.os().toString());
     }
 
     public static void test3() {
@@ -76,7 +76,7 @@ public class App {
     public static void test() {
 
         try {
-            Ping("java", "-jar", "D:/test.jar");
+            Ping("java", "-jar", "D:/test/test.jar");
 //            Ping("java -jar D:/test.jar");
 
         } catch (Exception e) {
@@ -113,8 +113,9 @@ public class App {
 
     public static void Ping(String... command) throws IOException, InterruptedException {
 //        process = Runtime.getRuntime().exec(command);
-        process = new ProcessBuilder(command).redirectOutput(new File("D:/err.txt")).redirectErrorStream(true).start();
-
+//        process = new ProcessBuilder(command).redirectOutput(new File("D:/err.txt")).redirectErrorStream(true).start();
+        process = new ProcessBuilder(command).redirectErrorStream(false).start();
+        System.out.println(SystemEnvironment.pid(process));
         new Thread(new Reader(process.getErrorStream(), "error")).start();
         new Thread(new Reader(process.getInputStream(), "info")).start();
 

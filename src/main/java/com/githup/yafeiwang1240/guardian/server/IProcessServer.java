@@ -6,4 +6,5 @@ import com.githup.yafeiwang1240.guardian.handler.CallBack;
 public interface IProcessServer {
     String execute(Object command, CallBack<ConsoleDto> callBack);
     int destroy(String id);
+    boolean isAlive(String id);
 }

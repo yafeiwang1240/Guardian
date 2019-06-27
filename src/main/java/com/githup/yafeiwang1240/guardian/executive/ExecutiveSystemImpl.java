@@ -47,6 +47,11 @@ public class ExecutiveSystemImpl implements IExecutiveSystem {
         return bufferManager.destroy(id);
     }
 
+    @Override
+    public boolean isAlive(String id) {
+        return bufferManager.isAlive(id);
+    }
+
     private class SystemThread implements Runnable {
 
         protected boolean exit = false;

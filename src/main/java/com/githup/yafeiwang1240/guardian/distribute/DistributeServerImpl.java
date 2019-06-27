@@ -4,6 +4,7 @@ import com.githup.yafeiwang1240.guardian.dto.ConsoleDto;
 import com.githup.yafeiwang1240.guardian.dto.DistributeDto;
 import com.githup.yafeiwang1240.guardian.factory.ThreadPoolFactory;
 import com.githup.yafeiwang1240.obrien.lang.Lists;
+import com.githup.yafeiwang1240.obrien.uitls.IOUtils;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -51,6 +52,7 @@ public class DistributeServerImpl implements IDistributeServer {
                 lock.unlock();
                 dtos.forEach(DistributeServerImpl::execute);
                 dtos.clear();
+                IOUtils.sleep(1);
             }
         }
 

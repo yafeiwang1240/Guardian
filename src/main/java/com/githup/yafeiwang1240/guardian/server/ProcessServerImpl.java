@@ -36,4 +36,9 @@ public class ProcessServerImpl implements IProcessServer {
     public int destroy(String id) {
         return system.destroy(id);
     }
+
+    @Override
+    public boolean isAlive(String id) {
+        return system.isAlive(id);
+    }
 }

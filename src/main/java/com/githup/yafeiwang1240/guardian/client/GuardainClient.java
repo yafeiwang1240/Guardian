@@ -22,4 +22,7 @@ public class GuardainClient {
         return server.destroy(id);
     }
 
+    public static boolean isAlive(String id) {
+        return server.isAlive(id);
+    }
 }

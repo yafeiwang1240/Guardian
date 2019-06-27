@@ -59,6 +59,15 @@ public class BufferManagerImpl implements IBufferManager {
         return processDto.getProcess().exitValue();
     }
 
+    @Override
+    public boolean isAlive(String id) {
+        ProcessDto processDto = processDtoMap.get(id);
+        if(processDto == null) {
+            return false;
+        }
+        return processDto.getProcess().isAlive();
+    }
+
     private void machining(String id, RecordEnum recordEnum, String print) {
         ProcessDto processDto = processDtoMap.get(id);
         // 缓冲结束
