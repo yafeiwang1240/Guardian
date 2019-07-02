@@ -21,6 +21,9 @@ public class SystemEnvironment {
     private static InetAddress address;
     private static Map<String, String> envMap;
     private static OS os;
+    private static String userhome;
+    private static String userdir;
+    private static String username;
 
     public enum OS {
         LINUX,
@@ -36,6 +39,9 @@ public class SystemEnvironment {
         }
         envMap = System.getenv();
         os = osname().toLowerCase().contains("windows") ? OS.WINDOWS : OS.LINUX;
+        userhome = properties.getProperty("user.home");
+        userdir = properties.getProperty("user.dir");
+        username = properties.getProperty("user.name");
     }
 
     /**
@@ -51,7 +57,8 @@ public class SystemEnvironment {
      * @return
      */
     public static String username() {
-        return envMap.get("USERNAME");
+//        return envMap.get("USERNAME");
+        return username;
     }
 
     /**
@@ -83,7 +90,11 @@ public class SystemEnvironment {
      * @return
      */
     public static String userdir() {
-        return properties.getProperty("user.dir");
+        return userdir;
+    }
+
+    public static String userhome() {
+        return userhome;
     }
 
     /**

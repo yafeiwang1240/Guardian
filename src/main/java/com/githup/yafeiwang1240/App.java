@@ -45,8 +45,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-        test();
+//        test();
 //        System.out.println(SystemEnvironment.os().toString());
+        System.out.println(SystemEnvironment.username());
     }
 
     public static void test3() {
