@@ -2,50 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2fa3b2a-7ec3-4dff-99fa-4d3a676dcf5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferContainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/distribute/IDistributeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/CommandDtoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/ConsoleDtoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/monitor/IMonitorServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/server/IProcessServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/annotation/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/annotation/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/annotation/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/annotation/ProcessElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/ProcessElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/buffer/BufferBeanContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferBeanContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/buffer/BufferContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/buffer/BufferManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/buffer/IBufferManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/IBufferManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/client/GuardainClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/client/GuardainClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/common/CommandDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/common/CommandValidateResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandValidateResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/common/CommandValidateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandValidateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/distribute/DistributeServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/distribute/DistributeServerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/distribute/IDistributeServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/dto/CommandDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/CommandDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/dto/ConsoleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/ConsoleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/dto/DistributeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/DistributeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/dto/ProcessDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/ProcessDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/enums/RecordEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/enums/RecordEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/enums/ResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/executive/ExecutiveSystemImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/executive/ExecutiveSystemImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/executive/IExecutiveSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/executive/IExecutiveSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/factory/BufferThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/BufferThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/factory/BufferThreadFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/BufferThreadFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/factory/CommandDtoFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/factory/ConsoleDtoFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/factory/ProcessDtoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/ProcessDtoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/factory/ThreadPoolFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/ThreadPoolFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/handler/BufferHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/handler/BufferHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/handler/CallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/handler/CallBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/monitor/IMonitorServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/monitor/MonitorServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/monitor/MonitorServerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/server/IProcessServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/server/ProcessServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/server/ProcessServerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/system/SystemEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/system/SystemEnvironment.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,10 +32,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="3024">
               <caret line="161" column="16" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -155,19 +122,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/concurrent/locks/AbstractOwnableSynchronizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-              <folding>
-                <element signature="e#1663#1664#0" expanded="true" />
-                <element signature="e#1708#1709#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/server/IProcessServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -176,7 +130,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
@@ -267,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/executive/IExecutiveSystem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/githup/yafeiwang1240/guardian/system/SystemEnvironment.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/BufferThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/executive/ExecutiveSystemImpl.java" />
@@ -275,6 +228,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandValidateResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/system/SystemEnvironment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferManagerImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -442,7 +396,7 @@
       <workItem from="1562055069180" duration="1731000" />
       <workItem from="1562059484938" duration="477000" />
       <workItem from="1562154076142" duration="636000" />
-      <workItem from="1562158083280" duration="130000" />
+      <workItem from="1562158083280" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="新增进程调度管理架构">
       <created>1561196938084</created>
@@ -500,11 +454,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562154158737</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="githup -&gt; github">
+      <created>1562158288487</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562158288487</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66105000" />
+    <option name="totallyTimeSpent" value="66189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -519,18 +480,18 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3144705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3144705" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3285968" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.5168739" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.29307282" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.12966253" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.29307282" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.42628774" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3285968" />
@@ -594,7 +555,8 @@
     <MESSAGE value="新增进程状态查询接口&#10;分发sleep" />
     <MESSAGE value="新增获取用户home目录" />
     <MESSAGE value="架构图组合调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="架构图组合调整" />
+    <MESSAGE value="githup -&gt; github" />
+    <option name="LAST_COMMIT_MESSAGE" value="githup -&gt; github" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandValidateUtils.java">
@@ -937,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="86" column="20" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/concurrent/locks/ReentrantLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4150">
@@ -1060,9 +1015,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="3024">
           <caret line="161" column="16" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1070,10 +1032,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="150">
+          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
