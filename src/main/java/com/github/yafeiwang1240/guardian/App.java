@@ -1,10 +1,11 @@
-package com.github.yafeiwang1240;
+package com.github.yafeiwang1240.guardian;
 
 import com.github.yafeiwang1240.guardian.client.GuardainClient;
 import com.github.yafeiwang1240.guardian.annotation.ProcessElement;
 import com.github.yafeiwang1240.guardian.dto.ConsoleDto;
 import com.github.yafeiwang1240.guardian.handler.CallBack;
 import com.github.yafeiwang1240.guardian.system.SystemEnvironment;
+import com.github.yafeiwang1240.obrien.lang.Lists;
 import com.github.yafeiwang1240.obrien.uitls.IOUtils;
 
 import java.io.*;
@@ -48,6 +49,9 @@ public class App {
 //        test();
 //        System.out.println(SystemEnvironment.os().toString());
         System.out.println(SystemEnvironment.username());
+        System.out.println(SystemEnvironment.getClassLoadPath());
+        System.out.println(SystemEnvironment.ip());
+        Lists.asList(1).forEach(System.out::println);
     }
 
     public static void test3() {

@@ -24,6 +24,7 @@ public class SystemEnvironment {
     private static String userhome;
     private static String userdir;
     private static String username;
+    private static String classLoadPath;
 
     public enum OS {
         LINUX,
@@ -42,6 +43,7 @@ public class SystemEnvironment {
         userhome = properties.getProperty("user.home");
         userdir = properties.getProperty("user.dir");
         username = properties.getProperty("user.name");
+        classLoadPath = SystemEnvironment.class.getResource("SystemEnvironment.class").getPath().replace("/system/SystemEnvironment.class", "");
     }
 
     /**
@@ -164,5 +166,9 @@ public class SystemEnvironment {
             IOUtils.closeQuietly(inputStreamReader);
         }
         return -1;
+    }
+
+    public static String getClassLoadPath() {
+        return classLoadPath;
     }
 }
