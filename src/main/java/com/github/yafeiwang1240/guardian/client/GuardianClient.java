@@ -8,7 +8,7 @@ import com.github.yafeiwang1240.guardian.server.ProcessServerImpl;
 /**
  * 进程管理客户端
  */
-public class GuardainClient {
+public class GuardianClient {
 
     private static IProcessServer server;
     static {

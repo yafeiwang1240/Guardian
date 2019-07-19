@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ThreadPoolFactory {
 
     public static ThreadPoolExecutor newThreadPoolExecutor() {
-        return newThreadPoolExecutor(2, 5, 60000, TimeUnit.MILLISECONDS,  20);
+        return newThreadPoolExecutor(7, 12, 60000, TimeUnit.MILLISECONDS,  25);
     }
 
     public static ThreadPoolExecutor newThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, int capacity) {

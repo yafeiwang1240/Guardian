@@ -20,11 +20,14 @@ public class BufferBeanContainer implements BufferContainer {
         threadInput.setIn(dto.getProcess().getInputStream());
         threadInput.setRecordEnum(RecordEnum.INFO);
         handler.invoke(dto.getCommandDto().getId(), RecordEnum.INFO, threadInput);
-        BufferThread threadError = BufferThreadFactory.newBufferThread();
-        threadError.setId(dto.getCommandDto().getId());
-        threadError.setIn(dto.getProcess().getErrorStream());
-        threadError.setRecordEnum(RecordEnum.ERROR);
-        handler.invoke(dto.getCommandDto().getId(), RecordEnum.ERROR, threadError);
+        // 是否合并流
+        if (!dto.isRedirectErrorStream()) {
+            BufferThread threadError = BufferThreadFactory.newBufferThread();
+            threadError.setId(dto.getCommandDto().getId());
+            threadError.setIn(dto.getProcess().getErrorStream());
+            threadError.setRecordEnum(RecordEnum.ERROR);
+            handler.invoke(dto.getCommandDto().getId(), RecordEnum.ERROR, threadError);
+        }
     }
 
 }

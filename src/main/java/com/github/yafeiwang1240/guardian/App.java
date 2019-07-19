@@ -1,6 +1,6 @@
 package com.github.yafeiwang1240.guardian;
 
-import com.github.yafeiwang1240.guardian.client.GuardainClient;
+import com.github.yafeiwang1240.guardian.client.GuardianClient;
 import com.github.yafeiwang1240.guardian.annotation.ProcessElement;
 import com.github.yafeiwang1240.guardian.dto.ConsoleDto;
 import com.github.yafeiwang1240.guardian.handler.CallBack;
@@ -75,7 +75,7 @@ public class App {
     public static void test2() {
         Call callBack = new Call();
         Command command = new Command();
-        String id = GuardainClient.execute(command, callBack);
+        String id = GuardianClient.execute(command, callBack);
         callBack.setId(id);
     }
     public static void test() {
