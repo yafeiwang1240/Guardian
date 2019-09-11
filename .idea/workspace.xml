@@ -1,46 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdbab508-72b5-4ff6-8260-f3b839a31e3b" name="Default Changelist" comment="添加系统路径">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/system/SystemPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guardian.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Guardian.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/Directory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/Environment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/annotation/ProcessElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferBeanContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/BufferManagerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/buffer/IBufferManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/client/GuardianClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandDecoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandValidateResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/common/CommandValidateUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/distribute/DistributeServerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/distribute/IDistributeServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/CommandDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/ConsoleDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/DistributeDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/dto/ProcessDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/enums/RecordEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/enums/ResultEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/executive/ExecutiveSystemImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/executive/IExecutiveSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/BufferThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/BufferThreadFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/CommandDtoFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/ConsoleDtoFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/ProcessDtoFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/factory/ThreadPoolFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/handler/BufferHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/handler/CallBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/monitor/IMonitorServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/monitor/MonitorServerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/server/IProcessServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/server/ProcessServerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/system/SystemEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/yafeiwang1240/guardian/system/SystemEnvironment.java" afterDir="false" />
+    <list default="true" id="cdbab508-72b5-4ff6-8260-f3b839a31e3b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +155,7 @@
       <workItem from="1563514708020" duration="110000" />
       <workItem from="1563525020339" duration="2149000" />
       <workItem from="1568173473559" duration="335000" />
-      <workItem from="1568201227423" duration="1767000" />
+      <workItem from="1568201227423" duration="1875000" />
     </task>
     <task id="LOCAL-00001" summary="新增进程调度管理架构">
       <created>1561196938084</created>
@@ -272,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563266692998</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改guardian功能">
+      <created>1568203035987</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1568203035987</updated>
+    </task>
+    <task id="LOCAL-00013" summary="修改guardian功能">
+      <created>1568203056952</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568203056952</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -343,6 +319,7 @@
     <MESSAGE value="githup -&gt; github" />
     <MESSAGE value="pom更新" />
     <MESSAGE value="添加系统路径" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加系统路径" />
+    <MESSAGE value="修改guardian功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改guardian功能" />
   </component>
 </project>
