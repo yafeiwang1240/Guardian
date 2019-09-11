@@ -69,10 +69,11 @@ public class ExecutiveSystemImpl implements IExecutiveSystem {
                         dtos.add(deque.poll());
                     }
                     dtos.forEach(this::commandProcess);
+                    dtos.clear();
                     try {
                         lock.wait();
                     } catch (Exception e) {
-
+                        e.printStackTrace();
                     }
                 }
             }
