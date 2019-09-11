@@ -3,6 +3,9 @@ package com.github.yafeiwang1240.guardian.executive;
 import com.github.yafeiwang1240.guardian.buffer.BufferManagerImpl;
 import com.github.yafeiwang1240.guardian.buffer.IBufferManager;
 import com.github.yafeiwang1240.guardian.dto.CommandDto;
+import com.github.yafeiwang1240.guardian.enums.RecordEnum;
+import com.github.yafeiwang1240.guardian.enums.ResultEnum;
+import com.github.yafeiwang1240.guardian.factory.ConsoleDtoFactory;
 import com.github.yafeiwang1240.guardian.factory.ProcessDtoFactory;
 import com.github.yafeiwang1240.guardian.factory.ThreadPoolFactory;
 import com.github.yafeiwang1240.guardian.common.CommandDecoder;
@@ -65,16 +68,49 @@ public class ExecutiveSystemImpl implements IExecutiveSystem {
                     while (!deque.isEmpty()) {
                         dtos.add(deque.poll());
                     }
-                    dtos.forEach(this::command);
+                    dtos.forEach(this::commandProcess);
+                    dtos.clear();
                     try {
                         lock.wait();
                     } catch (Exception e) {
-
+                        e.printStackTrace();
                     }
                 }
             }
         }
 
+        // 修改为最简单的command执行, 并合并数据流
+        public void commandProcess(CommandDto dto){
+            Object[] val = CommandDecoder.decode(dto.getCommand());
+            if(val == null) {
+                return;
+            }
+            Process process = null;
+            boolean redirectErrorStream = false;
+            try {
+                if(val[0] instanceof String[]) {
+                    String[] command = (String[]) val[0];
+                    process = new ProcessBuilder(command).redirectErrorStream(true).start();
+                } else if(val[0] instanceof String) {
+                    String command = (String) val[0];
+                    process = new ProcessBuilder(command).redirectErrorStream(true).start();
+                } else if(val[0] instanceof List){
+                    List<String> command = ((List<String>) val[0]);
+                    process = new ProcessBuilder(command).redirectErrorStream(true).start();
+                }else {
+                    dto.getCallBack().invoke(ConsoleDtoFactory.newConsoleDto("错误的命令行模式", RecordEnum.END, ResultEnum.FAILED));
+                    return;
+                }
+                redirectErrorStream = true;
+            } catch (Exception e) {
+                dto.getCallBack().invoke(ConsoleDtoFactory.newConsoleDto(e.getMessage(), RecordEnum.END, ResultEnum.FAILED));
+                return;
+            }
+            if(process != null)
+                bufferManager.read(ProcessDtoFactory.newProcessDto(process, dto, redirectErrorStream));
+        }
+
+        // 不合并流
         public void command(CommandDto dto) {
             Object[] val = CommandDecoder.decode(dto.getCommand());
             if(val == null) {
@@ -132,7 +168,7 @@ public class ExecutiveSystemImpl implements IExecutiveSystem {
                 // ignore
             }
             if(process != null)
-                bufferManager.read(ProcessDtoFactory.newProcessDto(process, dto));
+                bufferManager.read(ProcessDtoFactory.newProcessDto(process, dto, false));
         }
 
         protected void stop() {
