@@ -14,6 +14,8 @@ import java.util.Properties;
 
 /**
  * 封装获取系统信息
+ *
+ * @author wangyafei
  */
 public class SystemEnvironment {
 
