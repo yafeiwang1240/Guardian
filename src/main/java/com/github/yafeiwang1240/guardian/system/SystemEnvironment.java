@@ -1,12 +1,5 @@
 package com.github.yafeiwang1240.guardian.system;
 
-import com.github.yafeiwang1240.obrien.uitls.IOUtils;
-import com.sun.jna.Library;
-import com.sun.jna.Native;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.lang.reflect.Field;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Map;
@@ -107,67 +100,6 @@ public class SystemEnvironment {
      */
     public static OS os() {
         return os;
-    }
-
-    /**
-     * 指定进程pid
-     * @param process
-     * @return
-     */
-    public static long pid(Object process) {
-        if(os == OS.LINUX && process instanceof String) {
-            String command = (String) process;
-            return getLinuxPid(command);
-        }
-        if(os == OS.WINDOWS && process instanceof Process) {
-            Process _process = (Process) process;
-            return getWindowsPid(_process);
-        }
-        throw new IllegalArgumentException("无效的输入");
-    }
-
-    private static long getWindowsPid(Process process) {
-        long pid = -1;
-        Field field;
-        try {
-            field = process.getClass().getDeclaredField("handle");
-            field.setAccessible(true);
-            pid = Kernel32.INSTANCE.GetProcessId((long) field.get(process));
-        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
-            // ignore
-        }
-        return pid;
-    }
-
-    private interface Kernel32 extends Library {
-
-        static Kernel32 INSTANCE = (Kernel32) Native.loadLibrary("kernel32", Kernel32.class);
-
-        long GetProcessId(long hProcess);
-    }
-
-    private static long getLinuxPid(String command) {
-        BufferedReader reader = null;
-        InputStreamReader inputStreamReader = null;
-        try {
-            Process process = Runtime.getRuntime().exec("ps -ef");
-            inputStreamReader = new InputStreamReader(process.getInputStream());
-            reader = new BufferedReader(inputStreamReader);
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.contains(command)) {
-                    System.out.println("相关信息 -----> " + command);
-                    String[] chars = line.split("\\s+");
-                    return Long.parseLong(chars[1]);
-                }
-            }
-        } catch (Exception e) {
-            // ignore
-        } finally {
-            IOUtils.closeQuietly(reader);
-            IOUtils.closeQuietly(inputStreamReader);
-        }
-        return -1;
     }
 
     public static String getClassLoadPath() {

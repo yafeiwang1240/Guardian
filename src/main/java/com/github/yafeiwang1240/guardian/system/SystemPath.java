@@ -2,6 +2,8 @@ package com.github.yafeiwang1240.guardian.system;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 系统操作
@@ -41,6 +43,44 @@ public class SystemPath {
             builder.append(_value);
         }
         return builder.toString();
+    }
+
+    /**
+     * 数组拼接
+     * @param split
+     * @param value
+     * @return
+     */
+    public static String join(String split, List<String> value) {
+        if (value == null) return null;
+        int size = value.size();
+        if (size <= 0) {
+            return "";
+        }
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < size - 1; i++) {
+            builder.append(value.get(i));
+            builder.append(split);
+        }
+        builder.append(value.get(size - 1));
+        return builder.toString();
+    }
+
+    /**
+     * 切割成数组
+     * @param value
+     * @param split
+     * @return
+     */
+    public static List<String> split(String value, String split) {
+        String[] values = value.split(split);
+        List<String> result = new ArrayList<>();
+        for (String val : values) {
+            if (!val.trim().endsWith("")) {
+                result.add(val);
+            }
+        }
+        return result;
     }
 
     /**
