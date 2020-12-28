@@ -1,6 +1,7 @@
 package com.github.yafeiwang1240.guardian;
 
-import com.github.yafeiwang1240.guardian.system.SystemEnvironment;
+import com.github.yafeiwang1240.guardian.process.ProcessFactory;
+import com.github.yafeiwang1240.guardian.process.ProcessHandler;
 
 /**
  * Hello World!
@@ -8,10 +9,8 @@ import com.github.yafeiwang1240.guardian.system.SystemEnvironment;
 public class App {
 
     public static void main(String[] args) {
-        System.out.println(SystemEnvironment.os().toString());
-        System.out.println(SystemEnvironment.username());
-        System.out.println(SystemEnvironment.getClassLoadPath());
-        System.out.println(SystemEnvironment.ip());
+        ProcessHandler handler = ProcessFactory.newProcessHandler("dir");
+        handler.run();
     }
 
 }

@@ -8,9 +8,9 @@ import java.util.List;
 
 public class MavenUtils {
 
-    private static final List<String> goals;
+    private static volatile List<String> goals;
 
-    private static final File mvm;
+    private static volatile File mvm;
 
     static {
         goals = new ArrayList<>(3);
@@ -30,6 +30,14 @@ public class MavenUtils {
         invoker.setLogger(new PrintStreamLogger(System.err, InvokerLogger.WARN));
         invoker.setOutputHandler(s -> System.out.println(s));
         invoker.execute(request);
+    }
+
+    public static void setGoals(List<String> goals) {
+        MavenUtils.goals = goals;
+    }
+
+    public static void setMvm(File mvm) {
+        MavenUtils.mvm = mvm;
     }
 
     public static void main(String[] args) {

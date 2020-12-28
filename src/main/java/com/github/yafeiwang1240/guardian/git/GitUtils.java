@@ -12,8 +12,8 @@ import java.io.File;
  */
 public class GitUtils {
 
-    private static String username;
-    private static String password;
+    private static volatile String username;
+    private static transient volatile String password;
 
     /**
      * clone master
@@ -53,6 +53,14 @@ public class GitUtils {
             }
         }
         return dir.delete();
+    }
+
+    public static void setUsername(String username) {
+        GitUtils.username = username;
+    }
+
+    public static void setPassword(String password) {
+        GitUtils.password = password;
     }
 
     public static void main(String[] args) {
