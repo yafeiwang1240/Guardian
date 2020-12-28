@@ -77,6 +77,9 @@ public class ProcessHandlerImpl implements ProcessHandler {
         } finally {
             finish.set(true);
             callback.exit(exitValue.get());
+            if (process != null) {
+                process.destroy();
+            }
         }
     }
 }
